@@ -5,18 +5,18 @@ AMIs using [packer](https://www.packer.io/intro/getting-started/build-image.html
 
 | Name | Base Image | Json |
 | ---- | ---------- | ---- |
-| "bioc_2018-{{timestamp}}" | "name": "Bioc 3.8 R 3.5.1" | bioc_2018.json |
+| "bioc_2019-{{timestamp}}" | "name": "Bioc 3.10 R 3.6.0" | bioc_2019.json |
 
 
 # Getting started
 
-To install packer:
+To install packer on Mac:
 
 ```sh
 brew install packer
 ```
 
-AWS credentials can be specified multiple different ways, 
+AWS credentials can be specified multiple different ways,
 but the standard credentials file (`~/.aws/credentials`)
 works well to keep secrets out of the code.
 
@@ -29,7 +29,7 @@ packer build JSON_FILE
 The machine will start and the build will begin. Packer
 streams the output to the local screen, so it is easy to track
 progress. When complete, the image will be available with the
-given name. 
+given name.
 
 
 # Configuration
