@@ -38,9 +38,8 @@
         {
             "type": "shell",
             "inline":[
-        "Rscript -e 'BiocManager::install(\"remotes\")'",
-        "Rscript -e 'options(Ncpus=16); BiocManager::install(\"Bioconductor/BiocWorkshops2019\")'",
-		"Rscript -e 'options(Ncpus=16); BiocManager::install(\"Bioconductor/BiocWorkshops2019\")'",
+        "Rscript -e 'BiocManager::install(version = \"devel\")'",
+        "Rscript -e 'options(Ncpus=16); BiocManager::install(c(\"remotes\", \"Bioconductor/BiocWorkshops2019\"), ask = FALSE)'",
 		"sudo mkdir /data",
 		"sudo chown ubuntu:ubuntu /data",
 		"cd /data; wget https://starbuck1.s3.amazonaws.com/sradb/SRAmetadb.sqlite.gz; gunzip SRAmetadb.sqlite.gz"
